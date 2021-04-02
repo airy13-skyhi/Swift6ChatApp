@@ -17,6 +17,7 @@
 		05276D9B2617320900C05398 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 05276D9A2617320900C05398 /* GoogleService-Info.plist */; };
 		05276DA1261733D000C05398 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DA0261733D000C05398 /* RegisterViewController.swift */; };
 		05276DA52617343900C05398 /* CheckPermission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DA42617343900C05398 /* CheckPermission.swift */; };
+		05276DA826173CF600C05398 /* SendToDBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DA726173CF600C05398 /* SendToDBModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		05276D9A2617320900C05398 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		05276DA0261733D000C05398 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		05276DA42617343900C05398 /* CheckPermission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckPermission.swift; sourceTree = "<group>"; };
+		05276DA726173CF600C05398 /* SendToDBModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendToDBModel.swift; sourceTree = "<group>"; };
 		6593BF960099D8D5A814CFAD /* Pods-Swift6ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp.release.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		A6C2F11807580977B096C372 /* Pods-Swift6ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BAE8B4B43B9A7E05BD59D30E /* Pods_Swift6ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift6ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				05276DA42617343900C05398 /* CheckPermission.swift */,
+				05276DA726173CF600C05398 /* SendToDBModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 				05276D7326171E4000C05398 /* ViewController.swift in Sources */,
 				05276D6F26171E4000C05398 /* AppDelegate.swift in Sources */,
 				05276D7126171E4000C05398 /* SceneDelegate.swift in Sources */,
+				05276DA826173CF600C05398 /* SendToDBModel.swift in Sources */,
 				05276DA1261733D000C05398 /* RegisterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
