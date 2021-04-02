@@ -54,10 +54,10 @@
             </objects>
             <point key="canvasLocation" x="842.02898550724649" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="Uid-0w-lv5">
             <objects>
-                <viewController id="twm-44-E3b" sceneMemberID="viewController">
+                <viewController id="twm-44-E3b" customClass="RegisterViewController" customModule="Swift6ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="30z-e2-RFf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,9 @@
                                 <state key="normal" title="新規登録">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="touroku:" destination="twm-44-E3b" eventType="touchUpInside" id="2Vn-qv-AYf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="M2S-H0-YSb"/>
@@ -97,11 +100,18 @@
                     </view>
                     <navigationItem key="navigationItem" id="oMt-ok-B09"/>
                     <connections>
+                        <outlet property="emailTextField" destination="VZN-B0-gp3" id="3qo-Bk-nsJ"/>
+                        <outlet property="passwordTextField" destination="xmz-2G-JH7" id="ari-hl-Ede"/>
+                        <outlet property="profileImageView" destination="igk-qa-aiy" id="VgC-e1-bKO"/>
                         <segue destination="rtQ-Sx-1QF" kind="show" id="avd-E0-lIL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flm-DL-3hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="MSV-69-f8B"/>
+                <tapGestureRecognizer id="MSV-69-f8B">
+                    <connections>
+                        <action selector="tapImageView:" destination="twm-44-E3b" id="P0e-pT-Vc7"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1576.8115942028987" y="83.705357142857139"/>
         </scene>
