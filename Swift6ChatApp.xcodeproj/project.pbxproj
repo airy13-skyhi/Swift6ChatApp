@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		000C6F63D5D71B79D237A5E9 /* Pods_Swift6ChatApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAE8B4B43B9A7E05BD59D30E /* Pods_Swift6ChatApp.framework */; };
 		05276D6F26171E4000C05398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276D6E26171E4000C05398 /* AppDelegate.swift */; };
 		05276D7126171E4000C05398 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276D7026171E4000C05398 /* SceneDelegate.swift */; };
 		05276D7326171E4000C05398 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276D7226171E4000C05398 /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		05276D7726171E4E00C05398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05276D7A26171E4E00C05398 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05276D7C26171E4E00C05398 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6593BF960099D8D5A814CFAD /* Pods-Swift6ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp.release.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp.release.xcconfig"; sourceTree = "<group>"; };
+		A6C2F11807580977B096C372 /* Pods-Swift6ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
+		BAE8B4B43B9A7E05BD59D30E /* Pods_Swift6ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift6ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				000C6F63D5D71B79D237A5E9 /* Pods_Swift6ChatApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				05276D6D26171E4000C05398 /* Swift6ChatApp */,
 				05276D6C26171E4000C05398 /* Products */,
+				1E4C5E234487C8C565F4765E /* Pods */,
+				E6FAED1D4056740CF5B8CFB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = Swift6ChatApp;
 			sourceTree = "<group>";
 		};
+		1E4C5E234487C8C565F4765E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6C2F11807580977B096C372 /* Pods-Swift6ChatApp.debug.xcconfig */,
+				6593BF960099D8D5A814CFAD /* Pods-Swift6ChatApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6FAED1D4056740CF5B8CFB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BAE8B4B43B9A7E05BD59D30E /* Pods_Swift6ChatApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05276D7F26171E4E00C05398 /* Build configuration list for PBXNativeTarget "Swift6ChatApp" */;
 			buildPhases = (
+				FFDD3E2EE8849F3A91A6EA74 /* [CP] Check Pods Manifest.lock */,
 				05276D6726171E4000C05398 /* Sources */,
 				05276D6826171E4000C05398 /* Frameworks */,
 				05276D6926171E4000C05398 /* Resources */,
+				123842709CCAC59CD9B765FF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		123842709CCAC59CD9B765FF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFDD3E2EE8849F3A91A6EA74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Swift6ChatApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05276D6726171E4000C05398 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		05276D8026171E4E00C05398 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6C2F11807580977B096C372 /* Pods-Swift6ChatApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -295,12 +365,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Noneudemy.Swift6ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		05276D8126171E4E00C05398 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6593BF960099D8D5A814CFAD /* Pods-Swift6ChatApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -313,7 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Noneudemy.Swift6ChatApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
