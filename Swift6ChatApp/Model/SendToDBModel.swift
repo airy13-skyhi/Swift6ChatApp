@@ -9,8 +9,18 @@ import Foundation
 import FirebaseStorage
 
 
+protocol SendProfileOKDelegate {
+    
+    
+    func sendProfileOKDelegate(url:String)
+    
+}
+
 //画像をstorageserverへ送信処理
 class SendToDBModel {
+    
+    
+    var sendProfileOKDelegate:SendProfileOKDelegate?
     
     
     init() {
@@ -22,13 +32,14 @@ class SendToDBModel {
         
         //data型をUIImage型に変換
         let image = UIImage(data: data)
-        let profileImage = image?.jpegData(compressionQuality: 0.1)
-        
+        //data型に圧縮
+        let profileImageData = image?.jpegData(compressionQuality: 0.1)
+        //保存先(profileImage folder)
         let imageRef = Storage.storage().reference().child("profileImage").child("\(UUID().uuidString + String(Date().timeIntervalSince1970)).jpg")
         
         
-        //定数化した値をFirebaseStorageに送信(put)
-        imageRef.putData(Data(profileImage!), metadata: nil) { (metaData, error) in
+        //定数化した値をFirebaseStorageに送信(put)　data型を飛ばす
+        imageRef.putData(profileImageData!, metadata: nil) { (metaData, error) in
             
             
             if error != nil {
@@ -49,6 +60,7 @@ class SendToDBModel {
                 UserDefaults.standard.setValue(url?.absoluteString, forKey: "userImage")
                 
                 
+                self.sendProfileOKDelegate?.sendProfileOKDelegate(url: url!.absoluteString)
             }
             //値が入るまではここから呼ばれる２
             

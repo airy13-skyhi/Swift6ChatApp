@@ -103,7 +103,7 @@
                         <outlet property="emailTextField" destination="VZN-B0-gp3" id="3qo-Bk-nsJ"/>
                         <outlet property="passwordTextField" destination="xmz-2G-JH7" id="ari-hl-Ede"/>
                         <outlet property="profileImageView" destination="igk-qa-aiy" id="VgC-e1-bKO"/>
-                        <segue destination="rtQ-Sx-1QF" kind="show" id="avd-E0-lIL"/>
+                        <segue destination="rtQ-Sx-1QF" kind="show" identifier="chat" id="avd-E0-lIL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Flm-DL-3hY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -217,7 +217,7 @@
         <!--Item 1-->
         <scene sceneID="ax5-Th-QaI">
             <objects>
-                <viewController id="CjI-2z-gAK" sceneMemberID="viewController">
+                <viewController id="CjI-2z-gAK" customClass="ChatViewController" customModule="Swift6ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wXG-jq-GYP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -247,12 +247,19 @@
                                 <rect key="frame" x="338" y="774" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="send:" destination="CjI-2z-gAK" eventType="touchUpInside" id="TNK-5i-KVY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JwQ-b5-sDs"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="oUM-86-Uax"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="N5F-Pk-nhE" id="iKJ-Iz-jjW"/>
+                        <outlet property="tableView" destination="chQ-Bu-dQG" id="dRP-Yq-xF2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Kz-wp-h1y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -261,7 +268,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="YW2-BO-WaM">
             <objects>
-                <tabBarController id="rtQ-Sx-1QF" sceneMemberID="viewController">
+                <tabBarController id="rtQ-Sx-1QF" customClass="TabBarController" customModule="Swift6ChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="Zbc-aT-mnw"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OjE-bJ-Z0W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

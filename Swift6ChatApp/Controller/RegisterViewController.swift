@@ -10,12 +10,16 @@ import Firebase
 import FirebaseAuth
 
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SendProfileOKDelegate {
+    
     
     
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var profileImageView: UIImageView!
+    
+    var sendToDBModel = SendToDBModel()
+    var urlString = String()
     
     
     override func viewDidLoad() {
@@ -24,6 +28,7 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         let checkModel = CheckPermission()
         checkModel.showCheckPermission()
         
+        sendToDBModel.sendProfileOKDelegate = self
         
         // Do any additional setup after loading the view.
     }
@@ -33,7 +38,26 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
     @IBAction func touroku(_ sender: Any) {
         
         //email,passのtextFieldの空判定
-        
+        if emailTextField.text?.isEmpty != true && passwordTextField.text?.isEmpty != true, let image = profileImageView.image {
+            
+            Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+                
+                if error != nil {
+                    print(error.debugDescription)
+                    return
+                    
+                }
+                
+                //取得したimageを再度data型に圧縮
+                let data = image.jpegData(compressionQuality: 1.0)
+                
+                self.sendToDBModel.sendProfileImageData(data: data!)
+                
+                
+                //画面遷移
+            }
+            
+        }
         
         //登録機能
         
@@ -43,6 +67,17 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         
         
     }
+    
+    
+    func sendProfileOKDelegate(url: String) {
+        
+        urlString = url
+        if urlString.isEmpty != true {
+            self.performSegue(withIdentifier: "chat", sender: nil)
+        }
+        
+    }
+    
     
     
     
