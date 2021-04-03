@@ -23,6 +23,8 @@
 		05276DB12618224900C05398 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DB02618224900C05398 /* Message.swift */; };
 		05276DB52618716100C05398 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DB32618716100C05398 /* MessageCell.swift */; };
 		05276DB62618716100C05398 /* MessageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 05276DB42618716100C05398 /* MessageCell.xib */; };
+		05276DB92618849D00C05398 /* RoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DB82618849D00C05398 /* RoomViewController.swift */; };
+		05276DBC261886CE00C05398 /* RoomModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05276DBB261886CE00C05398 /* RoomModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,8 @@
 		05276DB02618224900C05398 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		05276DB32618716100C05398 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		05276DB42618716100C05398 /* MessageCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageCell.xib; sourceTree = "<group>"; };
+		05276DB82618849D00C05398 /* RoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewController.swift; sourceTree = "<group>"; };
+		05276DBB261886CE00C05398 /* RoomModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomModel.swift; sourceTree = "<group>"; };
 		6593BF960099D8D5A814CFAD /* Pods-Swift6ChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp.release.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		A6C2F11807580977B096C372 /* Pods-Swift6ChatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift6ChatApp.debug.xcconfig"; path = "Target Support Files/Pods-Swift6ChatApp/Pods-Swift6ChatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		BAE8B4B43B9A7E05BD59D30E /* Pods_Swift6ChatApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift6ChatApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -103,6 +107,7 @@
 				05276DA0261733D000C05398 /* RegisterViewController.swift */,
 				05276DAA2617E9C200C05398 /* TabBarController.swift */,
 				05276DAD2617EA1700C05398 /* ChatViewController.swift */,
+				05276DB82618849D00C05398 /* RoomViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 				05276DA42617343900C05398 /* CheckPermission.swift */,
 				05276DA726173CF600C05398 /* SendToDBModel.swift */,
 				05276DB02618224900C05398 /* Message.swift */,
+				05276DBB261886CE00C05398 /* RoomModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 				05276DAE2617EA1700C05398 /* ChatViewController.swift in Sources */,
 				05276DB12618224900C05398 /* Message.swift in Sources */,
 				05276D6F26171E4000C05398 /* AppDelegate.swift in Sources */,
+				05276DB92618849D00C05398 /* RoomViewController.swift in Sources */,
 				05276D7126171E4000C05398 /* SceneDelegate.swift in Sources */,
+				05276DBC261886CE00C05398 /* RoomModel.swift in Sources */,
 				05276DAB2617E9C200C05398 /* TabBarController.swift in Sources */,
 				05276DA826173CF600C05398 /* SendToDBModel.swift in Sources */,
 				05276DA1261733D000C05398 /* RegisterViewController.swift in Sources */,

@@ -10,7 +10,6 @@ import Firebase
 import SDWebImage
 
 
-
 class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     
@@ -31,8 +30,12 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "Cell")
         
         if UserDefaults.standard.object(forKey: "userImage") != nil {
             
@@ -44,6 +47,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             roomName = "All"
         }
         self.navigationItem.title = roomName
+        
+        loadMessages(roomName: roomName)
 
     }
     
@@ -107,8 +112,38 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        //MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MessageCell
+        
+        let message = messages[indexPath.row]
+        //messageのbodyPropatyにアクセス
+        cell.label.text = message.body
         
         
+        if message.sender == Auth.auth().currentUser?.email {
+            
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.rightImageView.sd_setImage(with: URL(string: imageString), completed: nil)
+            cell.leftImageView.sd_setImage(with: URL(string: messages[indexPath.row].imageString), completed: nil)
+            
+            cell.backView.backgroundColor = .systemTeal
+            cell.label.textColor = .white
+            
+        }else {
+            
+            cell.leftImageView.isHidden = true
+            cell.rightImageView.isHidden = false
+            cell.rightImageView.sd_setImage(with: URL(string: imageString), completed: nil)
+            cell.leftImageView.sd_setImage(with: URL(string: messages[indexPath.row].imageString), completed: nil)
+            
+            cell.backView.backgroundColor = .orange
+            cell.label.textColor = .white
+            
+            
+        }
+        
+        return cell
     }
     
     
