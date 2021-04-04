@@ -10,7 +10,7 @@ import Firebase
 import FirebaseAuth
 
 
-class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SendProfileOKDelegate {
+class RegisterViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, SendProfileOKDelegate,UITextFieldDelegate {
     
     
     
@@ -29,8 +29,16 @@ class RegisterViewController: UIViewController, UIImagePickerControllerDelegate,
         checkModel.showCheckPermission()
         
         sendToDBModel.sendProfileOKDelegate = self
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        emailTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
     }
     
     

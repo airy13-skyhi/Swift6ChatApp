@@ -132,8 +132,8 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             
         }else {
             
-            cell.leftImageView.isHidden = true
-            cell.rightImageView.isHidden = false
+            cell.leftImageView.isHidden = false
+            cell.rightImageView.isHidden = true
             cell.rightImageView.sd_setImage(with: URL(string: imageString), completed: nil)
             cell.leftImageView.sd_setImage(with: URL(string: messages[indexPath.row].imageString), completed: nil)
             
