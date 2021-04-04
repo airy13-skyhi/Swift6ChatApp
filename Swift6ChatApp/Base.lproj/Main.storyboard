@@ -48,7 +48,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="s6p-qA-o85"/>
+                    <navigationItem key="navigationItem" id="s6p-qA-o85">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Fo0-BC-uha"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -98,7 +100,9 @@
                         <viewLayoutGuide key="safeArea" id="M2S-H0-YSb"/>
                         <color key="backgroundColor" red="0.48726032505335004" green="1" blue="0.94162725575761119" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oMt-ok-B09"/>
+                    <navigationItem key="navigationItem" id="oMt-ok-B09">
+                        <barButtonItem key="backBarButtonItem" title=" " id="EIS-m1-3LH"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="emailTextField" destination="VZN-B0-gp3" id="3qo-Bk-nsJ"/>
                         <outlet property="passwordTextField" destination="xmz-2G-JH7" id="ari-hl-Ede"/>
@@ -229,7 +233,9 @@
                         <viewLayoutGuide key="safeArea" id="Lwu-JZ-LQS"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="aPs-Me-oxC"/>
+                    <navigationItem key="navigationItem" id="aPs-Me-oxC">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qL7-9J-J8u"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="KGv-Z4-jK6" id="Hzl-Oa-wL3"/>
                         <outlet property="tableView" destination="958-Vb-Ece" id="gdF-hj-LpI"/>
@@ -267,17 +273,25 @@
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="N5F-Pk-nhE">
-                                <rect key="frame" x="59" y="779" width="271" height="34"/>
+                                <rect key="frame" x="78" y="779" width="267" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gmw-v4-BgK">
-                                <rect key="frame" x="338" y="774" width="45" height="45"/>
+                                <rect key="frame" x="353" y="774" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="send"/>
                                 <connections>
                                     <action selector="send:" destination="CjI-2z-gAK" eventType="touchUpInside" id="TNK-5i-KVY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-VV-gnA">
+                                <rect key="frame" x="20" y="778" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="logout"/>
+                                <connections>
+                                    <action selector="logout:" destination="CjI-2z-gAK" eventType="touchUpInside" id="rgw-Mu-bY4"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -298,7 +312,9 @@
         <scene sceneID="YW2-BO-WaM">
             <objects>
                 <tabBarController storyboardIdentifier="tabVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="rtQ-Sx-1QF" customClass="TabBarController" customModule="Swift6ChatApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="Zbc-aT-mnw"/>
+                    <navigationItem key="navigationItem" id="Zbc-aT-mnw">
+                        <barButtonItem key="backBarButtonItem" title=" " id="aqr-s0-mcy"/>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="OjE-bJ-Z0W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -333,10 +349,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="avd-E0-lIL"/>
+        <segue reference="Lzq-1c-vGh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backGround" width="1280" height="1920"/>
+        <image name="logout" width="1024" height="1024"/>
         <image name="person.circle.fill" catalog="system" width="128" height="121"/>
         <image name="roomback" width="1040" height="1280"/>
         <image name="send" width="64" height="64"/>

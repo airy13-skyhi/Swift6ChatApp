@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 import SDWebImage
 
 
@@ -170,6 +171,22 @@ class ChatViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
                 
             }
         }
+        
+    }
+    
+    
+    
+    @IBAction func logout(_ sender: Any) {
+        
+        let firebaseAuth = Auth.auth()
+        
+        do {
+            try firebaseAuth.signOut()
+        } catch let error as NSError {
+            print("エラー",error)
+        }
+        
+        self.navigationController?.popViewController(animated: true)
         
     }
     

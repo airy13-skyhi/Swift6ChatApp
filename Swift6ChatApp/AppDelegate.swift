@@ -21,13 +21,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //logout　アプリを消してもuserIDは残るので 　　強制ログアウト
         
-        let firebaseAuth = Auth.auth()
+        /*let firebaseAuth = Auth.auth()
         do {
             try firebaseAuth.signOut()
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
-        
+        */
         
         
         
